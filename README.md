@@ -44,14 +44,42 @@ or ***set this as your ~/.bowerrc***:
 
     $ npm install
     $ bower install
+    
+#### settings.coffee
+    
+Before testing or starting the report web server, you need to modify settings.coffee so that it matches
+your MySQL server login credentials.
+
+````javascript
+settings =
+  assets:
+    compress: false
+
+  session:
+    cookie: "123456789012345667878"
+    secret: "123456789012345667878"
+
+  mysql:
+    user : 'node'
+    pass : 'nodepass'
+    host : 'localhost'
+    db   : 'ndoutils'
+
+module.exports = settings
+````
+
+#### Running tests
+
+A good way to determine if your system is ready to run this report generator
+is to run the tests. It will try to retrieve reports from MySQL through node-ndoutils and 
+try and connect to MySQL and start the web server.
+
+    $ npm test
 
 #### Running
 
     // Single thread quick start
     $ npm start
-
-    // testing
-    $ npm test
 
     // Cluster
     $ node cluster.js
@@ -59,10 +87,3 @@ or ***set this as your ~/.bowerrc***:
 #### Accessing
 
     browse to http://localhost:3000
-
-#### Running tests
-A good way to determine if your system is ready to run this report generator
-is to run the tests.  It will try and connect to MySQL and start the web
-server.  It will also try and retrieve reports from MySQL through node-ndoutils.
-
-    $ npm test
