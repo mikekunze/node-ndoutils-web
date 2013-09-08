@@ -87,3 +87,7 @@ try and connect to MySQL and start the web server.
 #### Accessing
 
     browse to http://localhost:3000
+    
+#### General Purpose Web Stack
+
+  - [Extending the webstack](https://github.com/mikekunze/node-ndoutils-web/wiki/Extending-the-web-stack)
