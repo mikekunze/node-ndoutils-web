@@ -1,0 +1,50 @@
+table.table.table-striped.table-hover
+    tbody
+        for details, host in hosts
+            if details.current_state > 0
+                tr(id="trHost_#{host}")
+                    td
+                        span.lead
+                            span(style="color:red;").glyphicon.glyphicon-warning-sign &nbsp;
+                            a(href="#/ndoutils/host/#{host}", data-name="ndoutils", data-component="host", data-method="showDetails") #{host}
+                        div.hide(id="hostDiv_#{host}")
+
+                            ul.list-group
+                                for service in details.services
+                                    a.list-group-item
+                                        h4.list-group-item-heading
+                                            if service.service_current_state > 0
+                                                span(style="color:red;").glyphicon.glyphicon-warning-sign &nbsp;
+                                            else
+                                                span(style="color:green;").glyphicon.glyphicon-ok-sign &nbsp;
+                                            | #{service.service_display_name}
+                                        p.list-group-item-text #{service.service_output}
+                            hr
+                            p.lead.pull-left
+                                a(href="#/ndoutils", data-name="ndoutils", data-component="host", data-method="showAllHosts") Back
+
+        for details, host in hosts
+            if details.current_state == 0
+                tr(id="trHost_#{host}")
+                    td
+                        span.lead
+                            span(style="color:green;").glyphicon.glyphicon-ok-sign &nbsp;
+                            a(href="#/ndoutils/host/#{host}", data-name="ndoutils", data-component="host", data-method="showDetails") #{host}
+                        div.hide(id="hostDiv_#{host}")
+
+                            ul.list-group
+                                for service in details.services
+                                    a.list-group-item
+                                        h4.list-group-item-heading
+                                            if service.service_current_state > 0
+                                                span(style="color:red;").glyphicon.glyphicon-warning-sign &nbsp;
+                                            else
+                                                span(style="color:green;").glyphicon.glyphicon-ok-sign &nbsp;
+                                            | #{service.service_display_name}
+                                        p.list-group-item-text #{service.service_output}
+                            hr
+                            p.lead.pull-left
+                                a(href="#/ndoutils", data-name="ndoutils", data-component="host", data-method="showAllHosts") Back
+
+:coffeescript
+    window.controller.computeNdoutilStats(window.controller.hosts)

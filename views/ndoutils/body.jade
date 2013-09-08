@@ -1,0 +1,32 @@
+.container
+    .row
+        .col-md-12
+            .well
+                .container
+                    .row
+                        .col-md-4
+
+                            center
+                                p.lead(id="hostsH2") Host Status ( Loading... )
+                                canvas.hide(id="hostsPieChart", width="140", height="140")
+                        .col-md-4
+
+                            center
+                                p.lead(id="servicesH2") Service Status  ( Loading... )
+                                canvas.hide(id="servicesPieChart", width="140", height="140")
+                        .col-md-4
+
+                            center
+                                p.lead(id="overallH2") Overall Status ( Loading... )
+                                canvas.hide(id="overallPieChart", width="140", height="140")
+
+    .row
+        .col-md-12
+            .well(id="overallDetailsDiv")
+                p.lead Loading Host and Service Details...
+
+    footer
+        p.pull-right
+            a(href='#/ndoutils') Back to top
+        p
+

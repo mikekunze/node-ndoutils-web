@@ -1,0 +1,16 @@
+{
+  "name": "node-web-skel",
+  "version": "0.0.1",
+  "authors": [
+    "Mike Kunze <mike.kunze@portalgnu.com>"
+  ],
+  "description": "Basic Express + Redis + MVC skel",
+  "license": "MIT",
+  "homepage": "http://portalgnu.com",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "*",
+    "jquery": "*",
+    "font-awesome": "*"
+  }
+}

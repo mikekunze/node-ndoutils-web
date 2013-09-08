@@ -1,0 +1,36 @@
+{
+  "name": "node-ndoutils-web",
+  "version": "0.0.1",
+  "description": "Basic ndoutils dynamic webApp",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "test": "vows test/* --spec"
+  },
+  "licenses": [
+    { 
+      "type": "MIT", 
+      "url": "https://github.com/PortalGNU/node-ndoutils-web/blob/master/LICENSE"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PortalGNU/node-ndoutils-web.git"
+  },
+  "keywords": [
+    "ndoutils",
+    "server"
+  ],
+  "dependencies": {
+    "express": "*",
+    "jade": "*",
+    "coffee-script": "*",
+    "async": "*",
+    "asset-rack": "*",
+    "connect-redis": "*",
+    "vows": "*",
+    "request": "*",
+    "mysql": "*",
+    "node-ndoutils": "*"
+  }
+}

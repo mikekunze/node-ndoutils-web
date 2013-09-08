@@ -1,0 +1,23 @@
+doctype 5
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/components/bootstrap/dist/css/bootstrap.css')
+        link(rel='stylesheet', href='/components/font-awesome/css/font-awesome.css')
+        link(rel='stylesheet', href='/css/carousel.css')
+
+        script(src="/components/jquery/jquery.min.js")
+        script(src="/components/bootstrap/dist/js/bootstrap.js")
+        script(src="/Chart.js/Chart.js")
+
+        !{assets.tag("/js/lib/Controller.js")}
+
+    body
+        block content
+
+    :coffeescript
+        $(document).ready ()->
+            window.controller = new window.Controller()
+
+
+    script(src="/components/bootstrap/assets/js/holder.js")
