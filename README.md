@@ -4,13 +4,13 @@ of neat looking client side icon sets from bootstrap3 and font-awesome.  If you 
 your nagios install, you can use this project to generate neat looking reports.  These reports
 are easily extended.
 
-![dashboard](https://raw.github.com/mikekunze/node-ndoutils-web/master/assets/img/Screen%20Shot%202013-09-08%20at%203.48.13%20PM.png)
+![dashboard](https://raw.github.com/mikekunze/node-ndoutils-web/master/assets/img/img1.png)
 
-![host list](https://raw.github.com/mikekunze/node-ndoutils-web/master/assets/img/Screen%20Shot%202013-09-08%20at%203.48.35%20PM.png)
+![host list](https://raw.github.com/mikekunze/node-ndoutils-web/master/assets/img/img2.png)
 
 #### Clicking a host to show its details
 
-![host details](https://raw.github.com/mikekunze/node-ndoutils-web/master/assets/img/Screen%20Shot%202013-09-08%20at%203.48.53%20PM.png)
+![host details](https://raw.github.com/mikekunze/node-ndoutils-web/master/assets/img/img3.png)
 
 
     $ git clone https://github.com/PortalGNU/node-ndotuils-web.git
